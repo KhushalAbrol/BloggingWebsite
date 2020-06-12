@@ -1,0 +1,280 @@
+@import "index_nav.css";
+@import "index_top.css";
+@import "index_blog.css";
+@import "index_side.css";
+@import "index_footer.css";
+
+
+
+body{
+    background-color: rgb(193, 193, 197);
+    border-radius: 10px;
+    padding:0px;
+
+}
+
+.nav, .top, .blog, .side,footer{
+    background-color: rgb(73, 70, 70);
+    padding: 10px;      
+    border:2px black solid;
+    border-radius: 10px;
+}
+
+.nav:hover, .top:hover, .blog:hover, .side:hover{
+    /*box-shadow:h-offset v-offset blur spread color*/
+    box-shadow:1px 1px 10px black;
+}
+
+.container{
+    
+    height:1000px;
+    display:grid;
+   /* border:2px black dashed;*/
+    grid-template-columns: 10% 30% 30% 29.5%;
+    grid-template-rows: 6vh 36vh 38vh 38vh 10vh;
+    grid-gap: .3%;
+    grid-template-areas: 
+    "na na na na"
+    "si to to to"
+    "si bl bl bl"
+    "si bl bl bl"
+    "ft ft ft ft";
+}
+
+
+/*------------------------------------On Small Screens---------------------------------------*/
+
+@media(max-width:1000px){
+body{
+    background-color: white;    
+}
+/*------------------------------------Container---------------------------------------*/
+
+.container{
+    height:1000px;    
+    display:grid;
+    grid-template-rows: 6vh 36vh 60vh 10vh;
+    grid-template-columns: 5vw 75vw 110px 1vw;
+    grid-gap: .1%;
+    grid-template-areas: 
+    "na ma si ex"/*navigation margin side*/
+    "to to to to"/*top*/
+    "bl bl bl bl"/*blog*/
+    "ft ft ft ft";/*footer*/
+}
+/*------------------------------------Navigation---------------------------------------*/
+#margin{
+    grid-area: ma;
+    background-color: white;
+    margin-right: -25vw;
+    margin-left: -15vw;;
+    position: sticky;
+    top:0;
+    z-index: 3;
+}
+nav{
+    grid-area:na ;
+    width:30px;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    position: sticky;
+    top:0;
+    border-radius: 0;
+    display: grid;
+    background-image: url("../image/menu.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+ /*   background-size: 40px;
+    background-position: 0;
+    background-repeat: no-repeat;*/
+    grid-template-rows: 210px 10px;
+    grid-template-columns: 50px;
+    grid-template-areas: 
+    "it it it"/*item*/
+    "sm sm sm"/*social media*/
+}
+
+nav a{
+    width: 110px;
+    height:25px ;
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius:0px;
+    text-decoration: none;
+    margin:0px 0 0 -15px;
+}
+
+nav a:hover{
+    margin-left:100px;
+
+    
+}
+
+#left{
+    margin-top:30px;
+    grid-area:it;
+    margin-left: 10px;
+    display:none;
+}
+
+#left a:hover{
+    background-color:rgb(114, 114,114);
+    width:120px;
+    height:25px;
+    border:1px solid white;
+    border-radius: 5px;
+    box-shadow:-1px -1px 2px black;
+}
+
+#right{
+    grid-area: sm;
+    background-color:royalblue;
+    width:109px;
+    height:85px;
+    margin-left: -3px;
+    display:none;
+}
+
+#right a{    
+    margin:2.5px auto 2.5px 35px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    width:30px;
+    height:20px;
+    /*background-color: coral;*/
+}
+
+#right a:hover{
+    font-size:25px;
+    height:22px;
+    margin-top: 1.5px;
+    margin-bottom: 1.5px;
+    background-color: cornflowerblue;
+}
+
+nav:hover #left{display: block;}
+nav:hover #right{display: block;}
+
+/*------------------------------------Side Menu---------------------------------------*/
+
+.side_text{
+    color:white; 
+    padding-top:3%;
+    padding-left:2.5vw;
+
+}
+
+.side{
+    border-radius: 0;
+    position: sticky;
+    top:0;
+    overflow: hidden;
+    z-index: 3;
+}
+    
+.side:hover{
+        overflow: visible;
+}
+
+.side p{
+margin-top:1vw;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size:15px;
+}
+
+
+.side a{
+    height:32px;
+    width:80px;
+    margin-left: -12px;
+    padding-left: 16px;
+    color:rgb(255, 255, 255);
+    border:1px solid rgb(80, 80, 80);
+    border-radius: 5px;
+    text-shadow: 2px 2px 2px black;    
+    text-decoration: none;
+    background-color: rgb(150, 150, 150);
+    font-size: 20px;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.side a:hover{
+    background-color: black;
+    background:linear-gradient(rgb(155, 154, 154),rgb(78, 78, 78));
+    -webkit-background-clip: unset;
+    text-shadow: 2px 2px 1px white;
+}
+
+/*------------------------------------Blog---------------------------------------*/
+
+/*------------------------------------On Small Screens{.............1050px.............}---------------------------------------*/
+@media(max-width: 1050px){
+
+    .blog button:hover h2{margin-top:-27rem;}
+    section{margin-top: 2rem;}
+    figcaption{margin-top:-50rem;}
+    .blog h4{  
+    margin:-8% auto;
+    padding-right: 10%;    }
+    .blog button:hover h4{margin-top:16rem;}
+}
+/*------------------------------------On Small Screens{.............1000px.............}---------------------------------------*/
+@media(max-width: 1000px){
+    .blog button:hover h4{margin-top:18rem;}
+}
+/*------------------------------------On Small Screens{.............850px.............}---------------------------------------*/
+@media(max-width: 850px){
+    figcaption{font-size: 40px;}
+    .blog button:hover h4{margin-top:15rem;}
+}
+/*------------------------------------On Small Screens{.............800px.............}---------------------------------------*/
+@media(max-width: 800px){
+    .blog button:hover h4{margin-top:14rem;}
+}
+/*------------------------------------On Small Screens{.............750px.............}---------------------------------------*/
+@media(max-width: 750px){
+    .blog button:hover h4{margin-top:12.5rem;}
+}
+/*------------------------------------On Small Screens{.............700px.............}---------------------------------------*/
+@media(max-width: 700px){
+
+    .blog button:hover h4{margin-top:11rem;}  
+}
+/*------------------------------------On Small Screens{.............650px.............}---------------------------------------*/
+@media(max-width: 650px){
+   
+.blog{
+    grid-area:bl;
+    background-color: rgb(221, 215, 215);
+    display:flex;
+    flex-direction: column;
+    padding:0;
+}
+.blog button{
+    width:100%;
+}
+.blog button:hover h2{
+    margin-top:-30rem;
+    font-size: 16px;}
+section{
+    font-size: 12px;
+}
+.blog button:hover h4{margin-top:27rem;}
+figcaption{
+    font-size: 20px;
+    margin-top: -47rem;
+}/*
+.blog div:hover h4{margin-top:5vw;}
+
+    section{margin-top: 2rem;}
+    figcaption{margin-top:-50rem;}
+    .blog h4{  
+    margin:-8% auto;
+    padding-right: 10%;    }
+    */
+
+}
+}

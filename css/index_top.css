@@ -1,0 +1,108 @@
+/*------------------------------------Top---------------------------------------*/
+
+.top{
+    grid-area:to ;
+    display: flex;
+    flex-direction: row;    
+    /*overflow:scroll;*/
+    overflow-y: hidden;
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-weight: bold;
+}
+/*------------------------------------Scroll Bar---------------------------------------*/
+.top::-webkit-scrollbar{
+    height: 5px;;
+}
+.top::-webkit-scrollbar-track{
+    background-color: rgb(155, 155, 155);
+}
+.top::-webkit-scrollbar-thumb{
+    background-color: rgb(124, 124, 124);
+}
+.top::-webkit-scrollbar-thumb:hover{
+    background: rgb(82, 81, 81);
+}
+
+#top_blogs{
+    min-width: 150px;
+    height: 32vh;
+    background:linear-gradient(180deg ,rgb(165, 46, 165),indigo, blue, green);
+    border-radius: 13px;
+    margin:auto 6% auto -10%;
+    margin-left:0;
+    z-index: 2;
+    text-align: center;
+    position: sticky;
+    left:0%;
+}
+
+#top_blogs h1{
+    margin: 25%;
+    font-size: 2rem;
+}
+
+.out{
+    padding:2px;
+    border-radius: 15px;
+    height: 32vh;
+    background:linear-gradient(180deg ,rgb(165, 46, 165),indigo, blue, green);
+    margin:auto -5%;
+}
+
+.in{
+    width:15vw;
+    min-width:100px ;
+    height: 28vh;
+    border-radius: 13px;
+    background-color: rgb(17, 17, 17);
+    margin:1px;
+    padding:13px;    
+    background:linear-gradient(#000, rgb(172, 170, 170));
+    overflow: hidden;  
+}
+
+article{
+    margin:10px auto -30px auto;
+    font-size: .8em;
+    color:rgb(172, 170, 170);
+    font-weight: lighter;
+    font-style: normal;
+    font-family: sans-serif, 'Arial Narrow', Arial, sans-serif;
+    text-overflow: ellipsis;
+}
+/*
+.in a{
+    margin:0px auto;
+    font-style:normal;
+    font-weight: normal;
+    position: relative;
+    text-align: center;
+    color:rgb(59, 42, 105);
+    text-decoration: underline ;
+}
+*/
+
+.out:hover{
+    z-index: 1;
+    transition: .5s;
+    box-shadow: 1px 1px 10px black;
+    margin-right:5%;
+    animation-name: amn;
+    animation-duration: .5s;
+}
+/*------------------------------------Animation---------------------------------------*/
+@keyframes amn {
+    0%   {background:linear-gradient(180deg ,violet,indigo, blue, green);}
+    10%  {background:linear-gradient(185deg ,violet,indigo, blue, green);}
+    20%  {background:linear-gradient(190deg ,violet,indigo, blue, green);}
+    30%  {background:linear-gradient(195deg ,violet,indigo, blue, green);}
+    40%  {background:linear-gradient(200deg ,violet,indigo, blue, green);}
+    50%  {background:linear-gradient(205deg ,violet,indigo, blue, green);}
+    60%  {background:linear-gradient(210deg ,violet,indigo, blue, green);}
+    70%  {background:linear-gradient(215deg ,violet,indigo, blue, green);}
+    80%  {background:linear-gradient(220deg ,violet,indigo, blue, green);}
+    90%  {background:linear-gradient(230deg ,violet,indigo, blue, green);}
+    100% {background:linear-gradient(235deg ,violet,indigo, blue, green);}
+}

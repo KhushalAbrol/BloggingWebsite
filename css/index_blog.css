@@ -1,0 +1,99 @@
+/*------------------------------------Blog---------------------------------------*/
+
+.blog{
+    grid-area:bl;
+    background-color: rgb(221, 215, 215);
+    display:flex;
+    flex-direction: row;
+    padding:0;
+}
+
+.blog button{
+    margin:.5%;
+    width:50%;
+    background-color: white;
+    border-radius: 15px 30px 30px 15px;
+    box-shadow: 2px 3px 2px black;
+    overflow: hidden;   
+    z-index: 0;
+    padding-bottom: 200px;
+}
+
+.blog a{
+    text-decoration: none;
+}
+
+.blog button img{
+    opacity:1;
+    height:70vh;
+    min-width:45vw;
+    z-index: -1;
+    overflow: hidden;   
+}
+
+.blog button:hover img{
+    opacity:.4 ;
+}
+
+section{
+    margin:5%;
+    padding-top:5%;
+    color:transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.blog button:hover section{
+    z-index: 1;
+    transition: .5s;
+    color:black;
+}
+
+.blog h2{
+    color:transparent;
+ }
+
+.blog button:hover h2{
+    color:white;
+    transition: .5s;
+    background-color: teal;
+    margin:-25rem 10% auto 10%;
+    opacity: 1;
+    text-align: left;
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.blog h6{
+    margin-left: 50%;
+    display:none;}
+
+figcaption{
+    color:white;
+    margin-top:-50rem;
+    font-size: 4vw;
+    text-align: center;
+    padding: 0% 40% 8% 40%;
+    text-shadow: 3px 3px 1px black;
+}
+
+.blog button:hover figcaption{
+    color:transparent;
+    text-shadow: none;
+    background-color: white;
+}
+
+.blog h4{
+     color:white;
+     margin:-8% auto;
+     padding-right: 10%;
+     text-align: right;
+     text-shadow: 2px 2px .1px black;
+
+ }
+
+.blog button:hover h4{
+    margin-top:17rem;
+    transition: .5s;
+    color:rgb(99, 99, 99);
+    text-shadow: 1px 1px 1px white;
+}

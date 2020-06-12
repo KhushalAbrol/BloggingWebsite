@@ -1,0 +1,35 @@
+/*------------------------------------Side Menu---------------------------------------*/
+
+.side{
+    grid-area: si;
+    overflow: hidden;
+}
+
+.side_text{
+
+    display:flex;
+    flex-direction: column;
+    color:white;
+    position: sticky; 
+    top:0;     
+}
+
+.side p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.8vw;
+}
+
+.side a{
+    color:rgba(192, 191, 191, 0.863);
+    text-decoration: none;
+    font-size: 1.7vw;
+    line-height: 2em;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.side a:hover{
+    background:linear-gradient(rgb(252, 6, 6),rgb(103, 103, 238));
+    -webkit-background-clip: text;
+    color:transparent;
+    text-shadow: 2px 2px 1px white;
+}
